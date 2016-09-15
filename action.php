@@ -35,7 +35,7 @@ class action_plugin_hidesectioneditbutton extends DokuWiki_Action_Plugin {
         global $ID;
         // if user can edit page
         if (auth_quickaclcheck($ID) >= AUTH_EDIT) {
-            $event->data = str_replace('<ul class="toc">', '<ul class="toc"><li class="level2"><div class="li"><button class="visibilityButton" onclick="toggleEditButtonsVisibility()">Toggle visibility</button></div></li>', $event->data);
+            $event->data = str_replace('<ul class="toc">', '<ul class="toc"><li class="level2"><div class="li"><button class="toggleVisibilityButton">Toggle visibility</button></div></li>', $event->data);
         }
     }
 }
