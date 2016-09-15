@@ -31,8 +31,6 @@ class action_plugin_hidesectioneditbutton extends DokuWiki_Action_Plugin {
      */
 
     public function handle_tpl_content_display(Doku_Event &$event, $param) {
-        var_dump('show buttons: ' . $_COOKIE['hideEditButton']);
-
         // define page id
         global $ID;
         // if user can edit page
