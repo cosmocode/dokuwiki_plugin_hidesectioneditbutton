@@ -1,69 +1,55 @@
-var editButtonsAreVisible, visibilityToggleButton;
-
-// initialize (when DOM elements loaded)
-document.addEventListener('DOMContentLoaded', function() {
-    init()
-}, false);
+jQuery(document).ready(function () {
+    init();
+});
 
 
-
-// initialize hide- and editbuttons (depending on cookie "hideEditButton")
+// initialize hide- and editbuttons
 function init() {
-    visibilityToggleButton = document.getElementsByClassName("visibilityButton")[0];
+    // set onclick listener on toggleVisibilityButton
+    jQuery('.toggleVisibilityButton').click(function() {
+        toggleEditButtonsVisibility();
+    });
 
-    var hideButtonValue = sessionStorage.getItem("hideEditButton");
-    if (hideButtonValue == true) {
-        editButtonsAreVisible = true;
+    // hide or show (depending on session entry "hideEditButton") editButtons
+    if (sessionStorage.getItem('hideEditButton') == 'true') {
         showEditButtons();
     } else {
-        editButtonsAreVisible = false;
         hideEditButtons();
     }
 }
 
 // toggle visibility of Editbuttons and set its cookie value
 function toggleEditButtonsVisibility() {
-    if(editButtonsAreVisible) {
-        // set cookie
-        sessionStorage.setItem('hideEditButton',false);
+    if(sessionStorage.getItem('hideEditButton') == 'true') {
         // hide edit buttons
         hideEditButtons();
-
-        editButtonsAreVisible = false;
+        sessionStorage.setItem('hideEditButton', false);
     } else {
-        // set cookie
-        sessionStorage.setItem('hideEditButton',true);
-        // hide edit buttons
+        // show edit buttons
         showEditButtons();
-
-        editButtonsAreVisible = true;
+        sessionStorage.setItem('hideEditButton',true);
     }
 }
-
-
-// helper functions
 
 // display edit buttons
 function showEditButtons() {
     // show all edit buttons
-    var editButtons = document.getElementsByClassName("btn_secedit");
-    for (var count = 0; count < editButtons.length; count++) {
-        editButtons[count].style.display="inline";
-    }
+    jQuery(".btn_secedit").each(function() {
+        jQuery(this).show();
+    });
 
     // set text of visibilityToggleButton
-    visibilityToggleButton.innerHTML = "Hide button";
+    jQuery('.toggleVisibilityButton').html("Hide button");
 }
 
 // hide edit buttons
 function hideEditButtons() {
     // hide all edit buttons
-    var editButtons = document.getElementsByClassName("btn_secedit");
-    for (var count = 0; count < editButtons.length; count++) {
-        editButtons[count].style.display="none";
-    }
+    jQuery(".btn_secedit").each(function() {
+        jQuery(this).hide();
+    });
 
     // set text of visibilityToggleButton
-    visibilityToggleButton.innerHTML = "Show button";
+    jQuery('.toggleVisibilityButton').html("Show button");
 }
 
