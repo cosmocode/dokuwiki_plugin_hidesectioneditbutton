@@ -12,7 +12,6 @@ function init() {
     visibilityToggleButton = document.getElementsByClassName("visibilityButton")[0];
 
     var hideButtonValue = sessionStorage.getItem("hideEditButton");
-
     if (hideButtonValue == true) {
         editButtonsAreVisible = true;
         showEditButtons();
