@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function init() {
     visibilityToggleButton = document.getElementsByClassName("visibilityButton")[0];
 
-    var hideButtonValue = getCookie("hideEditButton");
+    var hideButtonValue = sessionStorage.getItem("hideEditButton");
 
-    if (hideButtonValue == 'true') {
+    if (hideButtonValue == true) {
         editButtonsAreVisible = true;
         showEditButtons();
     } else {
@@ -26,14 +26,14 @@ function init() {
 function toggleEditButtonsVisibility() {
     if(editButtonsAreVisible) {
         // set cookie
-        document.cookie='hideEditButton=false';
+        sessionStorage.setItem('hideEditButton',false);
         // hide edit buttons
         hideEditButtons();
 
         editButtonsAreVisible = false;
     } else {
         // set cookie
-        document.cookie='hideEditButton=true';
+        sessionStorage.setItem('hideEditButton',true);
         // hide edit buttons
         showEditButtons();
 
@@ -66,21 +66,5 @@ function hideEditButtons() {
 
     // set text of visibilityToggleButton
     visibilityToggleButton.innerHTML = "Show button";
-}
-
-// get value of cookie key
-function getCookie(cookieKey) {
-    var name = cookieKey + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length,c.length);
-        }
-    }
-    return "";
 }
 
