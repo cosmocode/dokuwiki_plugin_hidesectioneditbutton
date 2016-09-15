@@ -1,6 +1,6 @@
 var editButtonsAreVisible, visibilityToggleButton;
 
-// initialize
+// initialize (when DOM elements loaded)
 document.addEventListener('DOMContentLoaded', function() {
     init()
 }, false);
