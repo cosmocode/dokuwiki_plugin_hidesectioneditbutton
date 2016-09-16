@@ -39,7 +39,7 @@ function showEditButtons() {
     });
 
     // set text of visibilityToggleButton
-    jQuery('.toggleVisibilityButton').html("Hide button");
+    jQuery('.toggleVisibilityButton').html("Hide edit buttons");
 }
 
 // hide edit buttons
@@ -50,6 +50,6 @@ function hideEditButtons() {
     });
 
     // set text of visibilityToggleButton
-    jQuery('.toggleVisibilityButton').html("Show button");
+    jQuery('.toggleVisibilityButton').html("Show edit buttons");
 }
 
