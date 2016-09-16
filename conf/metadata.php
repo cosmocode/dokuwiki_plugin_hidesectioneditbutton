@@ -2,7 +2,7 @@
 /**
  * Options for the hidesectioneditbutton plugin
  *
- * @author Carl Aischmann <dokuwiki@cosmocode.de>
+ * @author Carl Aischmann <aischmann@cosmocode.de>
  */
 
 

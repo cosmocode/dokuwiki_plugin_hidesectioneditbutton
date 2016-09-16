@@ -2,7 +2,7 @@
 /**
  * English language file for hidesectioneditbutton plugin
  *
- * @author Carl Aischmann <dokuwiki@cosmocode.de>
+ * @author Carl Aischmann <aischmann@cosmocode.de>
  */
 
 // menu entry for admin plugins

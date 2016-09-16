@@ -2,7 +2,7 @@
 /**
  * english language file for hidesectioneditbutton plugin
  *
- * @author Carl Aischmann <dokuwiki@cosmocode.de>
+ * @author Carl Aischmann <aischmann@cosmocode.de>
  */
 
 // keys need to match the config setting name

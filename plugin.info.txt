@@ -1,6 +1,6 @@
 base   hidesectioneditbutton
 author Carl Aischmann
-email  dokuwiki@cosmocode.de
+email  aischmann@cosmocode.de
 date   2016-09-02
 name   hidesectioneditbutton plugin
 desc   Plugin to hide the Section-Edit Button

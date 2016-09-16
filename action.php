@@ -3,7 +3,7 @@
  * DokuWiki Plugin hidesectioneditbutton (Action Component)
  *
  * @license GPL 2 http://www.gnu.org/licenses/gpl-2.0.html
- * @author  Carl Aischmann <dokuwiki@cosmocode.de>
+ * @author  Carl Aischmann <aischmann@cosmocode.de>
  */
 
 // must be run within Dokuwiki
