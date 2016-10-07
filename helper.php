@@ -9,7 +9,6 @@ class helper_plugin_hidesectioneditbutton extends DokuWiki_Plugin{
     {
         global $ID;
         global $ACT;
-        global $lang;
 
         if (auth_quickaclcheck($ID) >= AUTH_EDIT && $ACT === "show") {
             echo '<button class="toggleVisibilityButton">' . $this->getLang('hidebutton') . '</button>';
