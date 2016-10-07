@@ -15,6 +15,7 @@ function init() {
         hideEditButtons();
     } else {
         showEditButtons();
+        sessionStorage.setItem('hideEditButton', true);
     }
 }
 
