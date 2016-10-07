@@ -5,4 +5,4 @@
  * @author Carl Aischmann <aischmann@cosmocode.de>
  */
 
-$lang['hidebutton'] = 'Schalte Sichtbarkeit um';
+$lang['hidebutton'] = 'Schalte Sichtbarkeit des Editbuttons um';

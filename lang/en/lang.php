@@ -5,7 +5,7 @@
  * @author Carl Aischmann <aischmann@cosmocode.de>
  */
 
-$lang['hidebutton'] = 'Toggle visibility';
+$lang['hidebutton'] = 'Toggle visibility of edit button';
 
 
 
