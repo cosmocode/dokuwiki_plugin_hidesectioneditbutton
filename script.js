@@ -11,10 +11,11 @@ function init() {
     });
 
     // hide or show (depending on session entry "hideEditButton") editButtons
-    if (sessionStorage.getItem('hideEditButton') == 'true') {
-        showEditButtons();
-    } else {
+    if (sessionStorage.getItem('hideEditButton') === "false") {
         hideEditButtons();
+    } else {
+        showEditButtons();
+        sessionStorage.setItem('hideEditButton', true);
     }
 }
 
