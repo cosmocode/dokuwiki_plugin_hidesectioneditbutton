@@ -35,7 +35,7 @@ function toggleEditButtonsVisibility() {
 // display edit buttons
 function showEditButtons() {
     // show all edit buttons
-    jQuery(".btn_secedit").each(function() {
+    jQuery(".secedit").each(function() {
         jQuery(this).show();
     });
 }
@@ -43,7 +43,7 @@ function showEditButtons() {
 // hide edit buttons
 function hideEditButtons() {
     // hide all edit buttons
-    jQuery(".btn_secedit").each(function() {
+    jQuery(".secedit").each(function() {
         jQuery(this).hide();
     });
 }
